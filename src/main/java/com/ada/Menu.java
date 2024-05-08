@@ -5,6 +5,7 @@ import com.ada.banco.TipoConta;
 import com.ada.cliente.*;
 import com.ada.conta.Conta;
 import com.ada.conta.Transacao;
+import com.ada.util.Filtro;
 
 import java.util.List;
 import java.util.Scanner;
@@ -37,7 +38,8 @@ public class Menu {
             System.out.println("5 - Consultar Saldo");
             System.out.println("6 - Listar Contas");
             System.out.println("7 - Listar Transações");
-            System.out.println("8 - Sair");
+            System.out.println("8 - Listar Contas VIP");
+            System.out.println("99 - Sair");
 
             System.out.print("Opção > ");
             opcao = scanner.nextInt();
@@ -73,6 +75,9 @@ public class Menu {
                     listarTransacoes(scanner);
                     break;
                 case 8:
+                    listarContasVIP();
+                    break;
+                case 99:
                     System.exit(0);
                     break;
                 default:
@@ -162,6 +167,16 @@ public class Menu {
     private void listarContas() {
         System.out.println("\tContas cadastradas");
         List<Conta> contas = bancoController.buscarContas();
+        System.out.println("\t-------------------------------------");
+        for (Conta conta : contas) {
+            System.out.println("\t\tNumero: " + conta.getNumero() + " - Saldo: " + conta.consultarSaldo() + " - Cliente: " + conta.getCliente().getNome());
+        }
+        System.out.println("\t-------------------------------------");
+    }
+
+    private void listarContasVIP() {
+        System.out.println("\tContas cadastradas");
+        List<Conta> contas = bancoController.buscarContasVIP();
         System.out.println("\t-------------------------------------");
         for (Conta conta : contas) {
             System.out.println("\t\tNumero: " + conta.getNumero() + " - Saldo: " + conta.consultarSaldo() + " - Cliente: " + conta.getCliente().getNome());

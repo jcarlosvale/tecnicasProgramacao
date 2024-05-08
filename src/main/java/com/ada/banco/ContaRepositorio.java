@@ -1,6 +1,7 @@
 package com.ada.banco;
 
 import com.ada.conta.Conta;
+import com.ada.util.Filtro;
 
 import java.util.List;
 
@@ -16,4 +17,5 @@ public interface ContaRepositorio {
 
     List<Conta> buscarTodas();
 
+    List<Conta> buscar(Filtro filtro);
 }

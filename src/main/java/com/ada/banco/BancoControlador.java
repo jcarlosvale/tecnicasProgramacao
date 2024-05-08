@@ -3,6 +3,8 @@ package com.ada.banco;
 import com.ada.cliente.Cliente;
 import com.ada.cliente.Identificador;
 import com.ada.conta.*;
+import com.ada.util.FiltrarVIP;
+import com.ada.util.Filtro;
 
 import java.util.List;
 
@@ -105,6 +107,11 @@ public class BancoControlador {
 
     public List<Conta> buscarContas(){
         return contaRepositorio.buscarTodas();
+    }
+
+    public List<Conta> buscarContasVIP(){
+        final Filtro filtro = new FiltrarVIP();
+        return contaRepositorio.buscar(filtro);
     }
 
     public Conta buscarConta(String numero) {
