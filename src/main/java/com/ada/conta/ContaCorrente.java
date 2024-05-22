@@ -8,8 +8,10 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+//TODO: usar final em variaveis locais e parametros quando possível
 public class ContaCorrente implements Conta {
 
+    //TODO: usar atributos final
     private Identificador<String> numeroConta;
     private double saldo;
     private Cliente cliente;

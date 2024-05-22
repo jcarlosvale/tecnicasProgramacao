@@ -7,8 +7,10 @@ import com.ada.util.FiltrarVip;
 
 import java.util.List;
 
+//TODO: usar final em variaveis locais e parametros quando possível
 public class BancoService {
 
+    //TODO: usar atributos final
     private ContaRepositorio contaRepositorio;
 
     public BancoService(ContaRepositorio contaRepositorio) {

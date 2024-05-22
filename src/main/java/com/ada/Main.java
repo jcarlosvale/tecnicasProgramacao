@@ -5,6 +5,7 @@ import com.ada.banco.ContaRepositorio;
 import com.ada.banco.ContaRepositorioList;
 
 public class Main {
+    // TODO: usar variaveis final e parametros final, onde possível.
     public static void main(String[] args) {
 
         ContaRepositorio contaRepositorio = new ContaRepositorioList();

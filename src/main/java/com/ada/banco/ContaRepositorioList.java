@@ -7,8 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+//TODO: usar final em variaveis locais e parametros quando possível
 public class ContaRepositorioList implements ContaRepositorio {
 
+    //TODO: usar atributo final
     List<Conta> contas = new ArrayList<>();
 
     @Override

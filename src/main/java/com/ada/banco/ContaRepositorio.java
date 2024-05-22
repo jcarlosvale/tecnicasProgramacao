@@ -12,6 +12,7 @@ public interface ContaRepositorio {
 
     void atualizar(Conta conta);
 
+    //TODO: usar Optional
     Conta buscarPorNumero(String numero);
 
     List<Conta> bucarPorCliente(String identificador);

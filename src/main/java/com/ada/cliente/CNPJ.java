@@ -3,8 +3,10 @@ package com.ada.cliente;
 import lombok.EqualsAndHashCode;
 
 @EqualsAndHashCode
+//TODO: usar final em variaveis locais e parametros quando possível
 public class CNPJ implements Identificador<String> {
 
+    //TODO: atributo final
     private String valor;
 
     public CNPJ(String valor) {

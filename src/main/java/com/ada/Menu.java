@@ -9,10 +9,11 @@ import com.ada.conta.Transacao;
 import java.util.List;
 import java.util.Scanner;
 
+// TODO: usar variaveis final e parametros final, onde possível.
 public class Menu {
 
 
-
+    //TODO: atributos final
     private BancoService bancoService;
 
     public Menu(BancoService bancoService) {
@@ -98,6 +99,7 @@ public class Menu {
         List<Conta> contas = bancoService.buscarContasVarejo();
         System.out.println("\tContas cadastradas Varejo");
         System.out.println("\t-------------------------------------");
+        //TODO: usar STREAM
         for (Conta conta : contas) {
             System.out.println("\t\tNumero: " + conta.getNumero() + " - Saldo: " + conta.consultarSaldo() + " - Cliente: " + conta.getCliente().getNome());
         }
@@ -108,6 +110,7 @@ public class Menu {
         List<Conta> contas = bancoService.buscarContasVip();
         System.out.println("\tContas cadastradas Vip");
         System.out.println("\t-------------------------------------");
+        //TODO: usar STREAM
         for (Conta conta : contas) {
             System.out.println("\t\tNumero: " + conta.getNumero() + " - Saldo: " + conta.consultarSaldo() + " - Cliente: " + conta.getCliente().getNome());
         }
@@ -242,6 +245,7 @@ public class Menu {
         return cliente;
     }
 
+    //TODO: retornar OPTIONAL
     private static TipoConta getTipoConta(int tipo) {
         switch (tipo) {
             case 1:

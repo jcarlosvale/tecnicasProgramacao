@@ -8,8 +8,10 @@ import java.util.Objects;
 
 @Getter
 @ToString
+//TODO: usar final em variaveis locais e parametros quando possível
 public class Cliente implements Comparable<Cliente> {
 
+    //TODO: usar atributos final
     private Identificador<String> identificador;
     private Classificacao classificacao;
     private String nome;

@@ -2,8 +2,10 @@ package com.ada.conta;
 
 import com.ada.cliente.Identificador;
 
+//TODO: usar final em variaveis locais e parametros quando possível
 public class NumeroConta implements Identificador<String> {
 
+    //TODO: usar atributos final
     private static int numeroIncremental = 0;
     private String numero;
 

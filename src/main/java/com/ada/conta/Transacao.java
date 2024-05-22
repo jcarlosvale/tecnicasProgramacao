@@ -4,8 +4,10 @@ import com.ada.cliente.Cliente;
 
 import java.time.LocalDateTime;
 
+//TODO: usar final em variaveis locais e parametros quando possível
 public class Transacao {
 
+    //TODO: usar atributos
     private TipoTransacao transacao;
     private LocalDateTime dataTransacao;
     private double valor;

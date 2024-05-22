@@ -4,6 +4,7 @@ import com.ada.conta.Conta;
 
 import java.util.Objects;
 
+//TODO: remover para utilizar lambda expression
 public class FiltrarVip implements Filtro{
 
     @Override

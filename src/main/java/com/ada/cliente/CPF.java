@@ -5,8 +5,10 @@ import lombok.ToString;
 
 @ToString
 @EqualsAndHashCode
+//TODO: usar final em variaveis locais e parametros quando possível
 public class CPF implements Identificador<String> {
 
+    //TODO: atributo final
     private String valor;
 
     public CPF(String valor) {

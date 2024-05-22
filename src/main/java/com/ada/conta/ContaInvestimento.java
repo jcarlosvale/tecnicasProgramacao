@@ -7,8 +7,10 @@ import com.ada.cliente.Identificador;
 import java.time.LocalDateTime;
 import java.util.List;
 
+//TODO: usar final em variaveis locais e parametros quando possível
 public class ContaInvestimento implements Conta {
 
+    //TODO: usar atributos final
     private Identificador<String> numeroConta;
     private double saldo;
     private Cliente cliente;
